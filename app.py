@@ -6,7 +6,7 @@ from urllib.parse import quote
 import os
 
 app = Flask(__name__)
-PORT = int(os.getenv('PORT', '3000'))
+PORT = int(os.getenv('PORT', '1300'))
 
 @app.route('/api/lyrics', methods=['GET'])
 def get_lyrics():
@@ -116,4 +116,5 @@ def home():
     '''
 
 if __name__ == '__main__':
+
     app.run(host='0.0.0.0', port=PORT)
